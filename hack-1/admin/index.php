@@ -8,7 +8,7 @@ function logInput($message)
 {
 
     $data = array(
-        'message' => $message
+        'message' => $_SERVER['REMOTE_ADDR'].'> `'.$message."`"
     );
 
     $payload = json_encode($data);
@@ -106,7 +106,7 @@ function logInput($message)
 
             $out = shell_exec($exec);
             if ($out === null) {
-                echo 'Input error, system crash - message ' . $exec . ' not found!';
+                echo 'Input error, system crash - error with ' . $exec ;
             } else {
                 echo $out;
             }
