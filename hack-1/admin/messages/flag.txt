@@ -1,0 +1,1 @@
+From admin to h4x: I've placed the flag into server root's home directory. It contains the information you need.
